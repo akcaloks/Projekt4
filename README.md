@@ -1,7 +1,8 @@
 # Projekt: Analýza mezd, cen potravin a HDP v ČR (2006–2018)
 
 ### Použitá data
-- **Primární tabulka**: `t_jana_barotova_project_SQL_primary_final`  
+- **Primární tabulka**: `t_jana_barotova_project_SQL_primary_final`
+  - script: `Creation_of_Primary_Table.sql` 
   - Obsahuje průměrné ceny potravin a průměrné mzdy v jednotlivých odvětvích.  
   - Data vznikla propojením tabulek:
     - `czechia_price` (ceny potravin podle kategorií)
@@ -9,7 +10,8 @@
     - `czechia_payroll` (mzdy podle odvětví)
     - `czechia_payroll_industry_branch` (číselník odvětví)
 
-- **Sekundární tabulka**: `t_jana_barotova_project_SQL_secondary_final`  
+- **Sekundární tabulka**: `t_jana_barotova_project_SQL_secondary_final`
+  - script: `Creation_of_Secondary_Table.sql`  
   - Obsahuje makroekonomické ukazatele (HDP, populace, GINI, daně) pro evropské země.  
   - Pro analýzu byla použita data **pouze za ČR** v období **2006–2018**.
   - Data vznikla propojením tabulek:
