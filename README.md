@@ -29,7 +29,7 @@
 ## Otázky a výsledky
 
 ### 1) Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
-- script: `Wage Rise of Industries.sql`
+- script: `Wage_Rise_of_Industries.sql`
 - Použili jsme `LAG()` k porovnání mezd oproti předchozímu roku.
 - **Výsledek**:  
   - Většina odvětví dlouhodobě rostla.  
@@ -38,7 +38,7 @@
 ---
 
 ### 2) Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd? 
-- script: `Purchasing Power Through Time.sql`
+- script: `Purchasing_Power_Through_Time.sql`
 - Porovnávali jsme na základě průměrné mzdy v letech **2006 vs. 2018**. 
 - Výpočet: průměrná mzda / průměrná cena.  
 
