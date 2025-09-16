@@ -88,22 +88,34 @@ SELECT
     ROUND(corr(gdp_growth_prev_year, food_growth_pct)::NUMERIC,2) AS corr_gdp_food_next_year
 FROM with_lagged;
 
---Mzdy a HDP – stejný rok (0.42)
---→ středně silná pozitivní korelace.
---Růst HDP obvykle doprovází i růst mezd, ale ne vždy.
---
---Ceny potravin a HDP – stejný rok (0.49)
---→ podobná střední pozitivní vazba.
---Když se ekonomice daří, potraviny mají tendenci zdražovat, ale ne vždy.
---
---Mzdy a HDP – následující rok (0.67)
---→ poměrně silná pozitivní vazba.
---Růst HDP se častěji projeví až v růstu mezd o rok později.
---
---Ceny potravin a HDP – následující rok (-0.03)
---→ prakticky žádná vazba.
---Ceny potravin jsou zřejmě ovlivněny hlavně jinými faktory.
+--Odpověď:
 
---Závěr: Růst HDP se projevuje zejména v růstu mezd s ročním zpožděním, zatímco ceny potravin jsou asi spíše ovlivňovány jinými faktory.
+-- Korelace mezi růstem HDP a změnami mezd a cen potravin byla spočítána jak pro stejný rok,
+-- tak pro následující rok, aby bylo možné posoudit okamžitý i zpožděný efekt ekonomického růstu.
+
+-- 1) Stejný rok
+-- Mzdy a HDP: korelace 0.42 → středně silná pozitivní vazba. 
+-- To znamená, že v letech, kdy HDP rostlo, mzdy měly tendenci také růst, i když tento efekt nebyl zcela konzistentní.
+-- Ekonomika tedy obvykle „tahá“ mzdy směrem nahoru, ale nejsou to automatické či úplně lineární změny.
+
+-- Ceny potravin a HDP: korelace 0.49 → střední pozitivní vazba.
+-- Ceny potravin mají tendenci růst, když roste ekonomika, což může být způsobeno vyšší poptávkou nebo rostoucími výrobními náklady.
+-- Efekt je však opět nestabilní; někdy ceny potravin rostou rychleji, jindy pomaleji, i při stejném růstu HDP.
+
+-- 2) Následující rok
+-- Mzdy a HDP: korelace 0.67 → poměrně silná pozitivní vazba.
+-- To naznačuje, že růst HDP se častěji projeví ve zvýšení mezd s ročním zpožděním.
+-- Zpoždění může být způsobeno procesy v kolektivním vyjednávání, legislativou, nebo časem potřebným k tomu, aby firmy upravily mzdy podle ekonomických výsledků.
+
+-- Ceny potravin a HDP: korelace -0.03 → prakticky žádná vazba.
+-- To znamená, že růst HDP v předchozím roce nijak významně neovlivňuje tempo růstu cen potravin.
+-- Ceny potravin jsou patrně ovlivněny spíše jinými faktory, např. klimatickými podmínkami, mezinárodními cenami surovin, logistickými náklady nebo sezónními výkyvy.
+
+-- ZÁVĚR:
+-- Ekonomický růst v ČR se projevuje zejména v růstu mezd, zejména s ročním zpožděním. 
+-- Přímý efekt na ceny potravin není výrazný, což ukazuje, že spotřební ceny jsou determinovány spíše kombinací nabídky a poptávky v jednotlivých kategoriích a dalšími externími vlivy než samotným růstem HDP.
+-- Pro zaměstnance to znamená, že vyšší HDP se často pozitivně promítá do jejich kupní síly prostřednictvím rostoucích mezd, zatímco ceny potravin se vyvíjejí relativně nezávisle.
+
+
 
 
