@@ -13,13 +13,12 @@ growth AS (
         year,
         ROUND(
             100 * (avg_price - LAG(avg_price) OVER (ORDER BY year)) 
-                / LAG(avg_price) OVER (ORDER BY year), 2
+                / LAG(avg_price) OVER (ORDER BY year)::NUMERIC, 2
         ) AS food_growth_pct,
         ROUND(
             100 * (avg_wage - LAG(avg_wage) OVER (ORDER BY year)) 
-                / LAG(avg_wage) OVER (ORDER BY year), 2
+                / LAG(avg_wage) OVER (ORDER BY year)::NUMERIC, 2
         ) AS wage_growth_pct
-    FROM yearly_avg
 )
 SELECT
     year,
@@ -30,4 +29,9 @@ SELECT
 FROM growth
 ORDER BY year;
 
---Odpoveď: Neexistuje
+
+--Odpoveď:
+-- Analýza meziročního nárůstu cen potravin a mezd v ČR ukazuje, že během sledovaného období 2006–2018 neexistoval rok, kdy by ceny potravin rostly více než 10 % nad růstem mezd.
+-- Největší rozdíl mezi růstem cen potravin a mezd byl v roce 2013 (+6,66 % ve prospěch cen), což je ale stále pod hranicí 10 %. Jednalo se o jediný rok, kdy mzdy dokonce meziročně klesly.
+
+-- To znamená, že během tohoto období 2006–2018 mzdy rostly přibližně stejným tempem jako ceny potravin, nebo mírně rychleji, což je pozitivní pro reálnou kupní sílu obyvatel.
