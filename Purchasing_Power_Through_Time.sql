@@ -22,4 +22,11 @@ ORDER BY
 	category_name;
 
 -- V roce 2006 bylo možné si koupit za průměrnou roční mzdu 1,262 kg chleba a 1,409 litru mléka. 
--- V roce 2018 byla kupní síla průměrné mzdy vyšší a bylo možné si koupit 1,619 kg chleba a 1,614 litru mléka.
+-- Do roku 2018 mzdy vzrostly z 20 343 Kč na 31 981 Kč, zatímco ceny potravin rostly pomaleji. 
+-- Kupní síla se tedy zlepšila:
+--   • u chleba jen mírně – na 1 319 ks, což představuje nárůst o cca 4,5 %,
+--   • u mléka znatelněji – na 1 614 l, což je nárůst o cca 14,5 %.
+-- Celkově platí, že růst mezd převýšil růst cen, zejména u mléka. To je byl pro pracující obyvatele ČR pozitivní vývoj.
+-- Celkově lze říct, že období 2006–2018 přineslo zlepšení životní úrovně v oblasti základních potravin 
+-- díky vyšším mzdám a kontrolovanému růstu cen, což se projevilo zejména u mléka.
+
